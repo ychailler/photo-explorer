@@ -26,6 +26,6 @@ user2:/relative/path/
 TODO
 ----
 
-Better management of authentication:
+1. Better management of authentication:
     - change auth method (not using .htaccess)
     - admin page to manage users and auth paths
