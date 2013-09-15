@@ -38,17 +38,17 @@ if(strlen($path)>1) {
 <div class="row-fluid">
 <div class="span3">
 <?php
-	$files = scandir($thumb_path);
+	$files = scandir($photos_path);
 	$file_count=0;
 	foreach($files as $file){
-		if(is_dir("$thumb_path/$file")) {
+		if(is_dir("$photos_path/$file")) {
 			if($file == "..") {
 				if(strlen($path)>1) {
 					$parent_dir=urlencode(dirname($path));
 					print("<i class='icon-chevron-up'></i><a href='?path=$parent_dir'>$file</a><br>");
 				}
 			}
-			else if($file != "." && isAuthorized("$path/$file", false)) {
+			else if($file != "." && $file != "$THUMB_SUBDIR" && isAuthorized("$path/$file", false)) {
 				$new_path=urlencode("$path/$file");
 				print("<i class='icon-chevron-right'></i><a href='?path=$new_path'>$file</a><br>");
 			}
@@ -76,7 +76,7 @@ if(strlen($path)>1) {
 	if(isAuthorized("$path", true)) {
 		$file_idx=0;
 		foreach($files as $file){
-                	if(!is_dir("$thumb_path/$file")) {
+                	if(file_exists("$thumb_path/$file") && !is_dir("$thumb_path/$file")) {
 				if($file_idx>=($page-1)*$limit && $file_idx<$page*$limit) {
 					$new_path=urlencode($path);
 					$image=urlencode($file);
