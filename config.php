@@ -1,7 +1,7 @@
 <?php
 
-$PHOTOS_BASE_DIR = "/media/data1/Photos_thumb";
-$THUMB_BASE_DIR = "/media/data1/Photos_mini";
+$PHOTOS_BASE_DIR = "/my/photo/path";
+$THUMB_BASE_DIR = "/my/thumb/path";
 $THUMB_SUBDIR = "";
 $PAGE_SIZE = 50;
 
