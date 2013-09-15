@@ -21,3 +21,11 @@ user1:/relative/path/to/photos1
 user1:/relative/path/to/photos2
 user2:/relative/path/
 ```
+
+
+TODO
+----
+
+Better management of authentication:
+    - change auth method (not using .htaccess)
+    - admin page to manage users and auth paths
