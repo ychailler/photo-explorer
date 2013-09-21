@@ -3,6 +3,7 @@ photo-explorer
 
 A simple php website used to explore your photo library on the internet
 
+Example: http://yannick.chailler.free.fr/photo-explorer/
 
 Installing photo-explorer
 -------------------------
